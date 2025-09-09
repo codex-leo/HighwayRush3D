@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(180deg, #1a233a 0%, #3e5a8a 100%);
+}
+
+.score-ui {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.92);
+  padding: 12px 32px;
+  border-radius: 32px;
+  font-size: 2.2em;
+  color: #fff;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  letter-spacing: 2px;
+  z-index: 20;
+  user-select: none;
+  border: 2px solid #0fffc1;
+}
+
+.start-overlay, .gameover-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 100;
+  transition: opacity 0.4s;
+}
+
+.start-overlay h1, .gameover-overlay h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 24px #0008, 0 0 32px #0fffc1;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  color: #0fffc1;
+}
+
+.start-overlay .subtitle, .gameover-overlay .subtitle {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #000a;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.developer-credit {
+  font-size: 1.1em;
+  color: #0fffc1;
+  margin-top: 12px;
+  letter-spacing: 1.5px;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px #000a;
+}
+
+.start-overlay button, .gameover-overlay button {
+  padding: 18px 48px;
+  font-size: 1.5em;
+  background: linear-gradient(90deg, #0f0 40%, #0ff 100%);
+  border: none;
+  border-radius: 32px;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 32px;
+  box-shadow: 0 2px 16px #0ff8;
+  transition: background 0.2s, transform 0.2s;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+.start-overlay button:hover, .gameover-overlay button:hover {
+  background: linear-gradient(90deg, #0ff 40%, #0f0 100%);
+  transform: scale(1.05);
+}
+.gameover-overlay p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #fffa;
+}
+
+.music-credit-ui {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: 0 2px 12px #0008;
+}
+.music-credit-ui a {
+  color: #0fffc1;
+  text-decoration: underline;
+  pointer-events: auto;
+}
+@media (max-width: 600px) {
+  .score-ui { font-size: 1.2em; padding: 8px 12px; }
+  .start-overlay h1, .gameover-overlay h1 { font-size: 2.2em; }
+  .start-overlay button, .gameover-overlay button { font-size: 1em; padding: 12px 24px; }
+  .music-credit-ui { font-size: 0.9em; padding: 6px 8px; }
+}
