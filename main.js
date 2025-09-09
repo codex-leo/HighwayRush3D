@@ -264,10 +264,19 @@ for (let z = -150; z <= 150; z += 5) {
 
 // === Load Player Car Model ===
 const loader = new GLTFLoader();
-loader.load('./assets/player_car.glb', (gltf) => {
+loader.load('./assets/carModel.glb', (gltf) => {
   playerCar = gltf.scene;
-  playerCar.scale.set(1,1,1);
-  playerCar.position.set(0, 0, -10);
+  const box = new THREE.Box3().setFromObject(playerCar);
+  const size = box.getSize(new THREE.Vector3());
+  const targetSize = new THREE.Vector3(4, 1, 8);
+  const scale = Math.min(
+    targetSize.x / size.x,
+    targetSize.y / size.y,
+    targetSize.z / size.z
+  );
+  playerCar.scale.setScalar(scale);
+  playerCar.position.set(0, 0,-10);
+  playerCar.rotation.y = 90 * (Math.PI / 180);
   playerCar.traverse(obj => {
     if (obj.isMesh) {
       obj.castShadow = true;
