@@ -1,0 +1,36 @@
+# Blender 4.4.0 MTL File: 'carModel.blend'
+# www.blender.org
+
+newmtl Body
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Body_Base_Color.png
+map_Ns C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Body_Roughness.png
+map_refl C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Body_Metallic.png
+map_Bump -bm 1.000000 C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Body_Normal_OpenGL.png
+
+newmtl Glass
+Ns 797.193848
+Ka 0.063187 0.063187 0.063187
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Glass_Base_Color.png
+
+newmtl Tire
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Tire_Base_Color.png
+map_Ns C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Tire_Roughness.png
+map_refl C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Tire_Metallic.png
+map_Bump -bm 1.000000 C:/Users/PC/Downloads/low-poly-car-bmw-e30-1985-white/textures/Tire_Normal_OpenGL.png
